@@ -7,11 +7,11 @@
 class Web3 {
     public:
         Web3(String _provider);
-        String Web3ClientVersion();
+        String clientVersion();
+        String sha3(String data);
     private:
         String provider;
-        
-        String genReq(String method, String params);
+        String genReq(String method, String params[], int paramsSize);
         String sendReq(String req);
 };
 
